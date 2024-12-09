@@ -1,2 +1,25 @@
-# homepage
-create user and soft link homepage 
+# 사용자 생성 및 Apache 설정 스크립트
+이 스크립트는 새로운 사용자 계정을 생성하고, Apache 서버 설정을 업데이트하며, 사용자 홈페이지를 설정하는 자동화 스크립트입니다. 주로 웹 서버에서 개인 홈페이지를 생성하고 Apache 서버를 구성하는 데 사용됩니다.
+
+
+## 기능
+
+1. 새로운 사용자 생성
+2. 초기 비밀번호 설정 (사용자 이름으로 설정)
+3. 최초 로그인 시 비밀번호 변경 강제 설정
+4. 사용자 홈 디렉터리 내에 `homepage` 디렉터리 생성
+5. Apache 서버 설정에 사용자 관련 설정 추가
+6. 사용자의 홈페이지 디렉터리에 기본 HTML 페이지 생성
+7. 사용자에게만 홈 디렉터리 접근 권한 부여
+8. `/home/$username` 및 `/var/www/html/$username` 디렉터리 설정
+
+## 필수 조건
+  - Ubuntu 서버
+  - Apache 서버 설치 및 설정
+  - 루트 권한으로 실행할 수 있는 계정
+
+## 설치해야할 패키지 목록
+  - apache2
+  - passwd
+  - coreutils (awk, getent, date, mkdir, cp)
+
